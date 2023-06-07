@@ -341,7 +341,8 @@ footer p {
   
   .book img {
     width: 150px;
-    height: 225px;
+    padding-bottom: 6.5px;
+    height: 215px;
   }
   
   .book h2 {
