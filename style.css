@@ -327,6 +327,13 @@ footer p {
 }
 
 @media (max-width: 768px) {
+.navbar-brand {
+    font-size: 15px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
   .book {
     width: 80%;
     height: 60vh;
