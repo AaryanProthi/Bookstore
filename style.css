@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair&display=swap');
 
-
+/* Styling for the body */
 html {
   height: 90%;
 }
@@ -13,7 +13,8 @@ body {
   flex-direction: column;
 }
 
-
+/* Navbar styles */
+/* Navbar styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -25,7 +26,8 @@ body {
   background-color: #333;
 
   color: #fff;
-  z-index: 9999; 
+  z-index: 9999; /* Ensure the navbar appears above other elements */
+}
 
 .navbar-brand {
   color: #fff;
@@ -44,21 +46,24 @@ body {
 .nav-link {
   color: #fff;
   text-decoration: none;
-  font-size: 20px; 
+  font-size: 20px; /* Increase the font size */
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .nav-link:hover {
-  background-color: #068da9; 
+  background-color: #068da9; /* Vibrant pink */
 }
 
+/* Rest of your CSS styles */
 
 
 
+/* Rest of your CSS styles */
 
 
+/* Styling for book details */
 .book {
   display: flex;
   flex-direction: column;
@@ -188,7 +193,7 @@ body {
   }
 }
 
-
+/* Styling for the books container */
 #books-container {
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +208,7 @@ body {
   transition: 0.5s;
 }
 
-
+/* Styling for the book navigation */
 .book-navigation {
   display: flex;
   justify-content: center;
@@ -214,7 +219,7 @@ body {
   margin: 0 10px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #068da9; 
+  background-color: #068da9; /* Vibrant pink */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -223,9 +228,12 @@ body {
 }
 
 .book-navigation button:hover {
-  background-color: #2f00ff; 
+  background-color: #2f00ff; /* Darker pink */
 }
 
+/* Rest of your CSS styles */
+
+/* Rest of your CSS styles */
 
 main {
   background-color: #fff;
@@ -267,7 +275,13 @@ main p{
   }
 }
 
+/* Rest of your CSS styles */
 
+
+/* Rest of your CSS styles */
+
+
+/* Existing styles */
 footer {
   background-color: #333;
   color: #fff;
@@ -283,7 +297,7 @@ footer p {
   margin: 0;
 }
 
-
+/* Media Queries */
 @media (max-width: 1180px) {
   .navbar-brand {
     font-size: 42px;
@@ -291,7 +305,7 @@ footer p {
 
   .nav-link {
     font-size: 42px;
-    padding: 8px; 
+    padding: 8px; /* Adjust the padding as needed */
   }
 
   .book {
@@ -361,7 +375,7 @@ footer p {
 
   .nav-link {
     font-size: 16px;
-    padding: 8px; 
+    padding: 8px; /* Adjust the padding as needed */
   }
 
   .book {
