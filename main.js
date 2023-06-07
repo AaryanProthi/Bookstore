@@ -55,18 +55,7 @@ const fetchBooks = async () => {
   renderBook();
 };
 
-// Rest of the code remains the same...
 
-
-// Rest of the code remains the same...
-
-
-// Rest of the code remains the same...
-
-
-// Rest of the code remains the same...
-
-// Rest of the code remains the same...
 
 function renderBook() {
   container.innerHTML = "";
@@ -117,5 +106,5 @@ function showPreviousBook() {
 nextButton.addEventListener("click", showNextBook);
 previousButton.addEventListener("click", showPreviousBook);
 
-// Fetch books from Google Books API
+
 fetchBooks();
