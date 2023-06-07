@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair&display=swap");
 
-/* Styling for the body */
+
 html {
   height: 90%;
 }
@@ -13,8 +13,7 @@ body {
   flex-direction: column;
 }
 
-/* Navbar styles */
-/* Navbar styles */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -26,7 +25,7 @@ body {
   background-color: #333;
 
   color: #fff;
-  z-index: 9999; /* Ensure the navbar appears above other elements */
+  z-index: 9999; 
 }
 
 .navbar-brand {
@@ -46,24 +45,17 @@ body {
 .nav-link {
   color: #fff;
   text-decoration: none;
-  font-size: 20px; /* Increase the font size */
+  font-size: 20px; 
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .nav-link:hover {
-  background-color: #068da9; /* Vibrant pink */
+  background-color: #068da9;
 }
 
-/* Rest of your CSS styles */
 
-
-
-/* Rest of your CSS styles */
-
-
-/* Styling for book details */
 .book {
   display: flex;
   flex-direction: column;
@@ -77,7 +69,8 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
-  transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, font-weight 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out,
+    font-weight 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
 }
 
 @keyframes slide-out-left {
@@ -137,21 +130,18 @@ body {
   font-size: 20px;
   margin-bottom: 10px;
   color: #ffffff;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   opacity: 0;
   animation: fade 1000ms ease-in-out forwards;
 }
 
-.book p{
+.book p {
   margin-bottom: 5px;
   color: #ffffff;
-  font-family: 'Playfair', serif;
+  font-family: "Playfair", serif;
   opacity: 0;
   animation: fade 1000ms ease-in-out forwards;
 }
-
-
-
 
 .book::before {
   content: "";
@@ -193,7 +183,7 @@ body {
   }
 }
 
-/* Styling for the books container */
+
 #books-container {
   display: flex;
   flex-wrap: wrap;
@@ -208,7 +198,7 @@ body {
   transition: 0.5s;
 }
 
-/* Styling for the book navigation */
+
 .book-navigation {
   display: flex;
   justify-content: center;
@@ -219,7 +209,7 @@ body {
   margin: 0 10px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #068da9; /* Vibrant pink */
+  background-color: #068da9; 
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -228,12 +218,9 @@ body {
 }
 
 .book-navigation button:hover {
-  background-color: #2f00ff; /* Darker pink */
+  background-color: #2f00ff; 
 }
 
-/* Rest of your CSS styles */
-
-/* Rest of your CSS styles */
 
 main {
   background-color: #fff;
@@ -250,38 +237,31 @@ main:hover {
   box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
 }
 
-main p{
+main p {
   opacity: 0;
   font-size: 18px;
   animation: fade 1000ms ease-in-out forwards;
 }
 
-@keyframes fade{
-  0%{
-      top: 10px;
-      left: 10px;
-      filter: blur(15px);
-      opacity: 0;
+@keyframes fade {
+  0% {
+    top: 10px;
+    left: 10px;
+    filter: blur(15px);
+    opacity: 0;
   }
-  50%{
-      filter: blur(10px);
-      opacity: 0.9;
+  50% {
+    filter: blur(10px);
+    opacity: 0.9;
   }
-  100%{
-      top: 0px;
-      left: 0px;
-      filter: blur(0px);
-      opacity: 1;
+  100% {
+    top: 0px;
+    left: 0px;
+    filter: blur(0px);
+    opacity: 1;
   }
 }
 
-/* Rest of your CSS styles */
-
-
-/* Rest of your CSS styles */
-
-
-/* Existing styles */
 footer {
   background-color: #333;
   color: #fff;
@@ -299,51 +279,46 @@ footer p {
 
 /* Media Queries */
 
-
 @media (max-width: 1180px) {
-  
-
   .book {
     width: 55%;
     height: 70vh;
   }
-  
+
   .book img {
     width: 200px;
     height: 270px;
   }
-  
+
   .book h2 {
     font-size: 24px;
   }
-  
+
   .book p {
     font-size: 18px;
   }
 
-  .about p{
+  .about p {
     font-size: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  
-  
   .book {
     width: 80%;
     height: 60vh;
   }
-  
+
   .book img {
     width: 150px;
     padding-bottom: 6.5px;
     height: 215px;
   }
-  
+
   .book h2 {
     font-size: 20px;
   }
-  
+
   .book p {
     font-size: 14px;
   }
@@ -365,24 +340,43 @@ footer p {
     }
   }
 
+  .navbar-brand {
+    font-size: 15px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  main {
+    height: fit-content;
+    max-width: 80%;
+    padding: 0 10px;
+    margin-top: 45px;
+  }
+
+  main p {
+    opacity: 0;
+    font-size: 18px;
+    animation: fade 1000ms ease-in-out forwards;
+    margin-bottom: 10px; 
+  }
+
   .book {
     width: 80%;
     height: auto;
   }
-  
+
   .book img {
     width: 100%;
     height: auto;
   }
-  
+
   .book h2 {
     font-size: 18px;
   }
-  
+
   .book p {
     font-size: 12px;
   }
 }
-
-
-
