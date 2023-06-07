@@ -325,6 +325,10 @@ footer p {
   .book p {
     font-size: 18px;
   }
+  
+  footer p{
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 768px) {
