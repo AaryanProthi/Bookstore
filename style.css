@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair&display=swap');
 
-/* Styling for the body */
+
 html {
   height: 90%;
 }
@@ -13,8 +13,7 @@ body {
   flex-direction: column;
 }
 
-/* Navbar styles */
-/* Navbar styles */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -26,8 +25,7 @@ body {
   background-color: #333;
 
   color: #fff;
-  z-index: 9999; /* Ensure the navbar appears above other elements */
-}
+  z-index: 9999; 
 
 .navbar-brand {
   color: #fff;
@@ -46,24 +44,21 @@ body {
 .nav-link {
   color: #fff;
   text-decoration: none;
-  font-size: 20px; /* Increase the font size */
+  font-size: 20px; 
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .nav-link:hover {
-  background-color: #068da9; /* Vibrant pink */
+  background-color: #068da9; 
 }
 
-/* Rest of your CSS styles */
 
 
 
-/* Rest of your CSS styles */
 
 
-/* Styling for book details */
 .book {
   display: flex;
   flex-direction: column;
@@ -150,24 +145,7 @@ body {
   animation: fade 1000ms ease-in-out forwards;
 }
 
-@keyframes fade{
-  0%{
-      top: 10px;
-      left: 10px;
-      filter: blur(15px);
-      opacity: 0;
-  }
-  50%{
-      filter: blur(10px);
-      opacity: 0.9;
-  }
-  100%{
-      top: 0px;
-      left: 0px;
-      filter: blur(0px);
-      opacity: 1;
-  }
-}
+
 
 
 .book::before {
@@ -210,7 +188,7 @@ body {
   }
 }
 
-/* Styling for the books container */
+
 #books-container {
   display: flex;
   flex-wrap: wrap;
@@ -225,7 +203,7 @@ body {
   transition: 0.5s;
 }
 
-/* Styling for the book navigation */
+
 .book-navigation {
   display: flex;
   justify-content: center;
@@ -249,7 +227,6 @@ body {
 }
 
 
-
 main {
   background-color: #fff;
   padding: 20px;
@@ -267,6 +244,7 @@ main:hover {
 
 main p{
   opacity: 0;
+  font-size: 18px;
   animation: fade 1000ms ease-in-out forwards;
 }
 
@@ -305,8 +283,17 @@ footer p {
   margin: 0;
 }
 
-/* Media Queries */
+
 @media (max-width: 1180px) {
+  .navbar-brand {
+    font-size: 42px;
+  }
+
+  .nav-link {
+    font-size: 42px;
+    padding: 8px; 
+  }
+
   .book {
     width: 55%;
     height: 70vh;
@@ -327,13 +314,11 @@ footer p {
 }
 
 @media (max-width: 768px) {
-.navbar-brand {
-    font-size: 15px;
-  }
-
+  .navbar-brand,
   .nav-link {
     font-size: 15px;
   }
+  
   .book {
     width: 80%;
     height: 60vh;
@@ -355,8 +340,32 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  @keyframes glowing-border {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.02);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+  }
+
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 8px; 
+  }
+
   .book {
-    width: 90%;
+    width: 80%;
     height: auto;
   }
   
