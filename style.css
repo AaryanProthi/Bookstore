@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair&display=swap');
 
-
+/* Styling for the body */
 html {
   height: 90%;
 }
@@ -13,7 +13,8 @@ body {
   flex-direction: column;
 }
 
-
+/* Navbar styles */
+/* Navbar styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -25,7 +26,7 @@ body {
   background-color: #333;
 
   color: #fff;
-  z-index: 9999; 
+  z-index: 9999; /* Ensure the navbar appears above other elements */
 }
 
 .navbar-brand {
@@ -45,17 +46,24 @@ body {
 .nav-link {
   color: #fff;
   text-decoration: none;
-  font-size: 20px; 
+  font-size: 20px; /* Increase the font size */
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .nav-link:hover {
-  background-color: #068da9; 
+  background-color: #068da9; /* Vibrant pink */
 }
 
+/* Rest of your CSS styles */
 
+
+
+/* Rest of your CSS styles */
+
+
+/* Styling for book details */
 .book {
   display: flex;
   flex-direction: column;
@@ -130,13 +138,37 @@ body {
   margin-bottom: 10px;
   color: #ffffff;
   font-family: 'Merriweather', serif;
+  opacity: 0;
+  animation: fade 1000ms ease-in-out forwards;
 }
 
-.book p {
+.book p{
   margin-bottom: 5px;
   color: #ffffff;
   font-family: 'Playfair', serif;
+  opacity: 0;
+  animation: fade 1000ms ease-in-out forwards;
 }
+
+@keyframes fade{
+  0%{
+      top: 10px;
+      left: 10px;
+      filter: blur(15px);
+      opacity: 0;
+  }
+  50%{
+      filter: blur(10px);
+      opacity: 0.9;
+  }
+  100%{
+      top: 0px;
+      left: 0px;
+      filter: blur(0px);
+      opacity: 1;
+  }
+}
+
 
 .book::before {
   content: "";
@@ -178,7 +210,7 @@ body {
   }
 }
 
-
+/* Styling for the books container */
 #books-container {
   display: flex;
   flex-wrap: wrap;
@@ -193,7 +225,7 @@ body {
   transition: 0.5s;
 }
 
-
+/* Styling for the book navigation */
 .book-navigation {
   display: flex;
   justify-content: center;
@@ -231,6 +263,30 @@ main {
 
 main:hover {
   box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
+}
+
+main p{
+  opacity: 0;
+  animation: fade 1000ms ease-in-out forwards;
+}
+
+@keyframes fade{
+  0%{
+      top: 10px;
+      left: 10px;
+      filter: blur(15px);
+      opacity: 0;
+  }
+  50%{
+      filter: blur(10px);
+      opacity: 0.9;
+  }
+  100%{
+      top: 0px;
+      left: 0px;
+      filter: blur(0px);
+      opacity: 1;
+  }
 }
 
 
