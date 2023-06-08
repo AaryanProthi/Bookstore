@@ -1,10 +1,10 @@
+
 const container = document.getElementById("books-container");
 const previousButton = document.getElementById("previous-button");
 const nextButton = document.getElementById("next-button");
 
 let currentBookIndex = 0;
 let books = [];
-
 
 const fetchBooks = async () => {
   let totalItems = 0;
@@ -39,6 +39,7 @@ const fetchBooks = async () => {
           coverImageUrl: volumeInfo.imageLinks
             ? volumeInfo.imageLinks.thumbnail
             : "noimage.jpg",
+          summary: volumeInfo.description || bookTitle,
         };
 
         books.push(book);
@@ -55,22 +56,52 @@ const fetchBooks = async () => {
   renderBook();
 };
 
-
-
 function renderBook() {
-  container.innerHTML = "";
 
   const bookDiv = document.createElement("div");
   bookDiv.className = "book";
   bookDiv.innerHTML = `
     <img src="${books[currentBookIndex].coverImageUrl}" alt="Book Cover">
-    <h2>${books[currentBookIndex].title}</h2>
+    <h2 class="book-title">${books[currentBookIndex].title}</h2>
     <p>Author: ${books[currentBookIndex].author}</p>
     <p>Genre: ${books[currentBookIndex].genre}</p>
     <p>Number of Pages: ${books[currentBookIndex].pages}</p>
   `;
 
+  bookDiv.addEventListener("click", showBookDetails);
+
+  container.innerHTML = "";
   container.appendChild(bookDiv);
+}
+
+function showBookDetails() {
+  const modal = document.getElementById("modal");
+  const modalContent = document.getElementById("modal-content");
+  const closeModalButton = document.getElementById("close-button");
+
+  const book = books[currentBookIndex];
+
+  modalContent.innerHTML = `
+    
+    <p>${book.summary.substring(0, 1020)}</p>
+  `;
+
+  modal.style.display = "block";
+
+  closeModalButton.addEventListener("click", closeModal);
+  window.addEventListener("click", outsideClick);
+}
+
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
+function outsideClick(event) {
+  const modal = document.getElementById("modal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
 }
 
 function showNextBook() {
@@ -105,6 +136,5 @@ function showPreviousBook() {
 
 nextButton.addEventListener("click", showNextBook);
 previousButton.addEventListener("click", showPreviousBook);
-
 
 fetchBooks();
